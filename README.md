@@ -20,4 +20,4 @@ tensor_name_list = [n.name for n in tf.get_default_graph().as_graph_def().node]
 
 # 转换ckpt为pb
 from tensorflow.python.tools import freeze_graph
-freeze_graph('ckpt_to_pb/model.pb', '', False, 'model/InsightFace_iter_130000.ckpt', 'resnet_v1_50_1/E_BN2/Identity', '', '', 'ckpt_to_pb/freeze.pb', True, '')
+freeze_graph.freeze_graph('ckpt_to_pb/model.pb', '', False, 'model/InsightFace_iter_130000.ckpt', 'resnet_v1_50_1/E_BN2/Identity', '', '', 'ckpt_to_pb/freeze.pb', True, '')
