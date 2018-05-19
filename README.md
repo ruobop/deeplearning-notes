@@ -7,10 +7,10 @@
 new_saver = tf.train.import_meta_graph('model/InsightFace_iter_130000.ckpt.meta')
 
 # 载入参数
+sess = tf.Session()
 new_saver.restore(sess, 'model/InsightFace_iter_130000.ckpt')
 
 # 保存图结构为单独的文件
-sess = tf.Session()
 tf.train.write_graph(sess.graph_def, 'ckpt_to_pb', 'model.pb')
 
 # 获得所有tensor name列表
