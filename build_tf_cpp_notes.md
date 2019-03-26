@@ -9,3 +9,11 @@ echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | 
 curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
 sudo apt-get update && sudo apt-get install bazel
 ```
+
+### 编译tensorflow
+```
+cd tensorflow/
+./configure
+路径都选默认，选项都选N
+bazel build --config=monolithic //tensorflow:libtensorflow_cc.so
+```
